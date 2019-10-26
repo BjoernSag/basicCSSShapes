@@ -1,0 +1,120 @@
+.circle {
+	transform: translate3d(-100em, 0px, 0px);
+}
+.circle:focus {
+	outline: none;
+}
+
+.circle:focus-visible {
+	outline: 3px solid blanchedalmond; 
+}
+.circleSpanOn{
+	animation: circleSpan .2s ease-in;
+	animation-fill-mode: forwards;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	
+}
+
+.circleSpanOff {
+	background: black;
+		width: 25em;
+	  height: 25em;
+	  -moz-border-radius: 220px;
+	  -webkit-border-radius: 220px;
+	  border-radius: 220px;
+
+	animation: circleSpanOff 1.5s ease-in;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+
+
+.circleAnimationOn {
+
+	-moz-animation: circleOn 0.4s ease-in 0s forwards; /* Firefox */
+    -webkit-animation: circleOn 0.4s ease-in 0s forwards; /* Safari and Chrome */
+    -o-animation: circleOn 0.4s ease-in 0s forwards; /* Opera */
+    animation: circleOn 0.4s ease-in 0s forwards;
+}
+
+.circleAnimationOff {
+	transform: translate3d(-100em, 0px, 0px);
+	-moz-animation: circleOff .5s ease-in 0s ; /* Firefox */
+    -webkit-animation: circleOff .5s ease-in 0s ; /* Safari and Chrome */
+    -o-animation: circleOff .5s ease-in 0s ; /* Opera */
+    animation: circleOff .5s ease-in 0s ;	
+}
+.circleSpan:focus {
+	outline: none;
+}
+
+.circleSpan:focus-visible {
+	outline: 3px solid blanchedalmond; 
+}
+
+.circleSpanOn:focus {
+	outline: none;
+}
+
+.circleSpanOn:focus-visible {
+	outline: 3px solid blanchedalmond; 
+}
+
+.circleSpanOff:focus {
+	outline: none;
+}
+
+.circleSpanOff:focus-visible {
+	outline: 3px solid blanchedalmond; 
+}
+
+@keyframes circleOn {
+	from {transform: translate3d(-100em, 0px, 0px);}
+	to {transform: translate3d(0em, 0px, 0px); }
+  }
+  
+  @keyframes circleOff {
+	from {transform: translate3d(0em, 0px, 0px)}
+	to {transform: translate3d(-100em, 0px, 0px)}
+  }
+
+  @keyframes circleSpan {
+	  from {
+        width: 25em;
+		height: 25em;
+		-moz-border-radius: 220px;
+		-webkit-border-radius: 220px;
+		border-radius: 220px;
+		background: #F9DBBD;}
+	  to {	
+        width: 25em;
+		height: 25em;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+
+		background: #F9DBBD;}
+  }
+  @keyframes circleSpanOff {
+	from {width: 25em;
+		height: 25em;
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+  
+		}
+	to {	
+		background: #F9DBBD;
+		width: 25em;
+	  height: 25em;
+	  -moz-border-radius: 220px;
+	  -webkit-border-radius: 220px;
+	  border-radius: 220px;
+	}
+}
+
+ 

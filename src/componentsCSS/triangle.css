@@ -1,0 +1,51 @@
+.triangle {
+    transform: translate3d(500px, 0px, 0px);
+}
+
+
+.triangleAnimationOn {
+	animation: triangleOn 1s ease-in-out;
+}
+.triangleAnimationOn2 {
+	animation: triangleOn2 1s ease-in-out;
+}
+.triangleAnimationOff {
+	transform: translate3d(40em, 0px, 0px);
+	animation: triangleOff 1s
+}
+
+.triangleSpan:focus {
+	outline: none
+}
+
+.triangleSpan:focus-visible {
+	outline: 3px solid blanchedalmond; 
+}
+
+
+.text p{
+    position:absolute;
+    max-width:100%;
+    bottom:0;
+    right: 40%;
+    text-align:center;
+    font-family:arial;
+}
+
+
+
+  @keyframes triangleOn {
+	from {transform: translate3d(500px, 0px, 0px)}
+    to {transform: translate3d(0px, 0px, 0px)}
+  }
+  @keyframes triangleOn2 {
+	from {transform: translate3d(0px, 0px, 0px)}
+    to {transform: translate3d(500px, 0px, 0px)}
+  }
+  
+  @keyframes triangleOff {
+	from {transform: translate3d(0px, 0px, 0px)}
+	to {transform: translate3d(500px, 0px, 0px)}
+  }
+
+

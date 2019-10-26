@@ -1,0 +1,79 @@
+
+
+.rectangle {
+	transform: translate3d(40em, 0px, 0px);
+}
+.rectangle:focus {
+	outline: none
+}
+
+.rectangle:focus-visible {
+	outline: 3px solid blanchedalmond; 
+}
+
+
+.rectangleAnimationOn {
+	animation: rectangle 0.1s ease-in-out;
+	outline: none;
+}
+.rectangleAnimationOff {
+	transform: translate3d(40em, 0px, 0px);
+	animation: rectangleOff 0.1s
+}
+
+.rectangleAnimationOn:focus {
+	outline: none
+}
+
+.rectangleAnimationOn:focus-visible {
+	outline: 3px solid blanchedalmond; 
+}
+
+.rectangleAnimationOff:focus {
+	outline: none
+}
+
+.rectangleAnimationOff:focus-visible {
+	outline: 3px solid blanchedalmond; 
+}
+
+@keyframes rectangle {
+	from {transform: translate3d(40em, 0px, 0px)}
+	to {transform: translate3d(0em, 0px, 0px)}
+  }
+  
+  @keyframes rectangleOff {
+	from {transform: translate3d(0em, 0px, 0px)}
+	to {transform: translate3d(40em, 0px, 0px)}
+  }
+
+  .arrowBounce {
+    animation: bounce 2s infinite;
+    color: #5778F3;
+    font-size: 22px;
+    position: relative;
+}
+
+.arrowBounce::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("https://res.cloudinary.com/bjoern-2914a/image/upload/v1571800222/website/bjoernsagstad-whitearrow-svg-24x24_xozrig.ico") no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
